@@ -1,0 +1,96 @@
+.team {
+  text-align: center;
+  background-color: var(--secondary-background-color);
+  &__title {
+    @include font(
+      Roboto,
+      28px,
+      700,
+      1.18,
+      0.03em,
+      var(--secondary-black-color)
+    );
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+  &__item-info {
+    padding: 30px 32px;
+  }
+  &__item-title {
+    @include font(
+      Roboto,
+      16px,
+      500,
+      1.19,
+      0.03em,
+      var(--secondary-black-color)
+    );
+    margin-bottom: 10px;
+  }
+  &__item-text {
+    @include font(Roboto, 16px, 400, 1.19, 0.03em, var(--main-text-color));
+    margin-bottom: 16px;
+  }
+}
+.team-list {
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.team__item {
+  background-color: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+.team__socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.socials__item-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--main-effects-option);
+  &:hover,
+  &:focus {
+    background-color: var(--main-blue-color);
+  }
+  &:hover .social-icon,
+  &:focus .social-icon {
+    fill: var(--main-white-color);
+  }
+}
+.social-icon {
+  fill: var(--social-links-icon-color);
+  transition: fill var(--main-effects-option);
+}

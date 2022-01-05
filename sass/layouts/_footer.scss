@@ -1,0 +1,174 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--main-background-color);
+  text-align: left;
+}
+.footer__wrap {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--main-blue-color));
+  &__right {
+    color: var(--main-white-color);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+.footer-tab-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: unset;
+  }
+}
+.footer-contacts__wrap {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+.footer-contacts {
+  &__item-address {
+    font-style: normal;
+    @include font(Roboto, 14px, 400, 1.71, 0.03em, var(--main-white-color));
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+}
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+.contacts-link-footer {
+  font-style: normal;
+  @include font(Roboto, 14px, 400, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
+  transition: color var(--main-effects-option);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--main-blue-color);
+  }
+}
+.join-us {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+.join-us-list {
+  display: flex;
+  justify-content: center;
+}
+.join-us__item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--footer-join-bg-color);
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.join-us__text {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  @include font(Roboto, 14px, 700, 1.14, 0.03em, var(--main-white-color));
+}
+.join-us__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-join-bg-color);
+  transition: background-color var(--main-effects-option);
+  &:hover,
+  &:focus {
+    background-color: var(--main-blue-color);
+  }
+}
+.join-us__icon {
+  fill: var(--main-white-color);
+}
+.subscribe {
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+}
+.subscribe-form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.subscribe__title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  @include font(Roboto, 14px, 700, 1.14, 0.03em, var(--main-white-color));
+}
+.subscribe-input {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  @include font(Roboto, 16px, 400, 1.25, 0.03em, rgba(255, 255, 255, 0.6));
+  outline: none;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+.subscribe-button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 29px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--main-blue-color);
+  @include font(Roboto, 16px, 900, 1.87, 0.06em, var(--main-white-color));
+  cursor: pointer;
+  transition: color var(--main-effects-option),
+    background-color var(--main-effects-option);
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+    fill: var(--button-hover-text-color);
+  }
+}
+.sub-icon {
+  fill: var(--main-white-color);
+  margin-left: 10px;
+}

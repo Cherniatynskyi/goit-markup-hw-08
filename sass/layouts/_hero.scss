@@ -1,0 +1,83 @@
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mobile-images/hero-mob-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile-images/hero-mob-2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet-images/img-hero-tab-1x.jpg);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet-images/img-hero-tab-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    min-height: 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img.jpg);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-img-2x.jpg);
+    }
+  }
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @include font(Roboto, 26px, 900, 1.62, 0.06em, var(--main-white-color));
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+  &__order-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main-blue-color);
+    @include font(Roboto, 16px, 900, 1.87, 0.06em, var(--main-white-color));
+    cursor: pointer;
+    transition: color var(--main-effects-option),
+      background-color var(--main-effects-option);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--button-hover-color);
+      color: var(--button-hover-text-color);
+      fill: var(--button-hover-text-color);
+    }
+  }
+}
