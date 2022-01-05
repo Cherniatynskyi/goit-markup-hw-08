@@ -1,20 +1,16 @@
-@import './utils/var';
-@import './utils/mixsin';
-
-@import './base/reset';
-@import './base/common';
-
-@import './components/logo';
-@import './components/hidden';
-@import './components/header';
-@import './components/hero';
-@import './components/feature';
-@import './components/about';
-@import './components/team';
-@import './components/clients';
-@import './components/footer';
-@import './components/portfolio-menu';
-@import './components/portfolio-projects';
-@import './components/modal';
-@import './components/social-list';
-@import './components/mob-menu';
+@import "./vendors/modern-normalize";
+@import "./utils/reset";
+@import "./utils/mixin";
+@import "./utils/variables";
+@import "./components/container";
+@import "./utils/visually-hidden";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/our-work";
+@import "./layouts/our-team";
+@import "./layouts/customers";
+@import "./layouts/footer";
+@import "./layouts/projects";
+@import "./components/modal";
+@import "./components/menu";
